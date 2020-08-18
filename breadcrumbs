@@ -1,0 +1,28 @@
+На примере https://club3.dro4er.com/15-blondinka-posle-velopoezdki-trahaetsya-s-nastoyaschim-pikaperom.html
+
+Важно! Мы выводим отдельно текст с названием страницы, но не выводим ссылку на неё и не помещаем в микроразметку!
+
+Вариант с JSON-LD
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Демонстрационный сайт",
+    "item": "https://club3.dro4er.com/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Популярное",
+    "item": "https://club3.dro4er.com/popular/"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "ГИГ ПОРНО",
+    "item": "https://club3.dro4er.com/popular/gig-porno/"  
+  }]
+}
+</script>
