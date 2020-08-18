@@ -1,8 +1,40 @@
 На примере https://club3.dro4er.com/15-blondinka-posle-velopoezdki-trahaetsya-s-nastoyaschim-pikaperom.html
 
-Важно! Мы выводим отдельно текст с названием страницы, но не выводим ссылку на неё и не помещаем в микроразметку!
+Вариант с Schema.org помещаем в body, там, где выводится текст. Мне кажется что его сделать проще всего
 
-Вариант с JSON-LD
+    <ol vocab="https://schema.org/" typeof="BreadcrumbList">
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage"
+            href="https://club3.dro4er.com/"">
+          <span property="name">Демонстрационный сайт</span></a>
+        <meta property="position" content="1">
+      </li>
+      »
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage"
+            href="https://club3.dro4er.com/popular/">
+          <span property="name">Популярное</span></a>
+        <meta property="position" content="2">
+      </li>       
+       »
+      <li property="itemListElement" typeof="ListItem">
+        <a property="item" typeof="WebPage"
+            href="https://club3.dro4er.com/popular/gig-porno/">
+          <span property="name">ГИГ ПОРНО</span></a>
+        <meta property="position" content="3">
+      </li>
+      »
+      <li property="itemListElement" typeof="ListItem">
+        <span property="name">Блондинка после велопоездки трахается с настоящим пикапером</span>
+        <meta property="position" content="4">
+      </li>
+    </ol>
+
+
+
+
+
+Вариант с JSON-LD помещаем в <head> </head>. Важно! Мы выводим текст с названием страницы, но не выводим ссылку на неё и не помещаем в микроразметку.
 
 <script type="application/ld+json">
 {
@@ -26,3 +58,6 @@
   }]
 }
 </script>
+
+
+
