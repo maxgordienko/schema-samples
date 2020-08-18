@@ -1,0 +1,24 @@
+Вставляем в <head> </head>. Выводим только на страницах ролика.
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Название ролика",
+      "description": "Описание ролика",
+      "thumbnailUrl": [
+        "Ссылка на картинку-превью у видео",
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg"
+       ],
+      "uploadDate": "2016-03-31T08:00:00+08:00", // дата загрузки
+      "duration": "PT1M54S", //продолжительность ролика, формат https://en.wikipedia.org/wiki/ISO_8601 или просто писать минуты и секунды типа PT333M54S
+      "contentUrl": "https://www.example.com/video/123/file.mp4", //ссылка на скачивание
+      "embedUrl": "https://www.example.com/embed/123", // ссылка на текущий URL
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "http://schema.org/WatchAction" },
+        "userInteractionCount": 5647018 //число просмотров видео
+      }
+    }
+    </script>
